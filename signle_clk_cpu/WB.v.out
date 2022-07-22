@@ -1,0 +1,80 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "D:\software\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\va_math.vpi";
+S_0000022a73ac6ac0 .scope module, "WB" "WB" 2 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "I_type";
+    .port_info 1 /INPUT 1 "L_type";
+    .port_info 2 /INPUT 1 "S_type";
+    .port_info 3 /INPUT 1 "R_type";
+    .port_info 4 /INPUT 1 "JAL_instr";
+    .port_info 5 /INPUT 1 "JALR_instr";
+    .port_info 6 /INPUT 1 "LUI_instr";
+    .port_info 7 /INPUT 1 "AUIPC_instr";
+    .port_info 8 /INPUT 1 "B_type";
+    .port_info 9 /INPUT 32 "data_men_dout";
+    .port_info 10 /INPUT 32 "ALU_res";
+    .port_info 11 /INPUT 32 "imme";
+    .port_info 12 /INPUT 32 "PC_add_4";
+    .port_info 13 /INPUT 32 "PC_add_imme";
+    .port_info 14 /OUTPUT 32 "WB_data";
+    .port_info 15 /OUTPUT 1 "registers_W_en";
+o0000022a739a71e8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000022a739a7038 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000022a73ac7280 .functor OR 1, o0000022a739a71e8, o0000022a739a7038, C4<0>, C4<0>;
+L_0000022a739a4740 .functor NOT 1, L_0000022a73ac7280, C4<0>, C4<0>, C4<0>;
+o0000022a739a71b8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000022a739a7068 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000022a73acd250 .functor OR 1, o0000022a739a71b8, o0000022a739a7068, C4<0>, C4<0>;
+o0000022a739a70c8 .functor BUFZ 1, C4<z>; HiZ drive
+o0000022a739a7098 .functor BUFZ 1, C4<z>; HiZ drive
+L_0000022a739f2f40 .functor OR 1, o0000022a739a70c8, o0000022a739a7098, C4<0>, C4<0>;
+o0000022a739a6fd8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000022a73ac7060_0 .net "ALU_res", 31 0, o0000022a739a6fd8;  0 drivers
+o0000022a739a7008 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022a73ac6d60_0 .net "AUIPC_instr", 0 0, o0000022a739a7008;  0 drivers
+v0000022a73ac6e00_0 .net "B_type", 0 0, o0000022a739a7038;  0 drivers
+v0000022a739f1c50_0 .net "I_type", 0 0, o0000022a739a7068;  0 drivers
+v0000022a739f1cf0_0 .net "JALR_instr", 0 0, o0000022a739a7098;  0 drivers
+v0000022a739f21a0_0 .net "JAL_instr", 0 0, o0000022a739a70c8;  0 drivers
+o0000022a739a70f8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022a739f2100_0 .net "LUI_instr", 0 0, o0000022a739a70f8;  0 drivers
+o0000022a739a7128 .functor BUFZ 1, C4<z>; HiZ drive
+v0000022a739f29c0_0 .net "L_type", 0 0, o0000022a739a7128;  0 drivers
+o0000022a739a7158 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000022a739f27e0_0 .net "PC_add_4", 31 0, o0000022a739a7158;  0 drivers
+o0000022a739a7188 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000022a739f2ba0_0 .net "PC_add_imme", 31 0, o0000022a739a7188;  0 drivers
+v0000022a739f2b00_0 .net "R_type", 0 0, o0000022a739a71b8;  0 drivers
+v0000022a739f2060_0 .net "S_type", 0 0, o0000022a739a71e8;  0 drivers
+v0000022a739f2880_0 .net "WB_data", 31 0, L_0000022a739f2920;  1 drivers
+v0000022a739f2c40_0 .net *"_ivl_0", 0 0, L_0000022a73ac7280;  1 drivers
+v0000022a739f1de0_0 .net *"_ivl_10", 31 0, L_0000022a739f2560;  1 drivers
+v0000022a739f2ce0_0 .net *"_ivl_12", 31 0, L_0000022a739f2600;  1 drivers
+v0000022a739f2380_0 .net *"_ivl_14", 31 0, L_0000022a739f26a0;  1 drivers
+v0000022a739f24c0_0 .net *"_ivl_16", 31 0, L_0000022a739f2740;  1 drivers
+v0000022a739f1e80_0 .net *"_ivl_4", 0 0, L_0000022a73acd250;  1 drivers
+v0000022a739f1f20_0 .net *"_ivl_6", 0 0, L_0000022a739f2f40;  1 drivers
+L_0000022a739f2fb8 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v0000022a739f1fc0_0 .net/2u *"_ivl_8", 31 0, L_0000022a739f2fb8;  1 drivers
+o0000022a739a73c8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000022a739f2240_0 .net "data_men_dout", 31 0, o0000022a739a73c8;  0 drivers
+o0000022a739a73f8 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000022a739f22e0_0 .net "imme", 31 0, o0000022a739a73f8;  0 drivers
+v0000022a739f2420_0 .net "registers_W_en", 0 0, L_0000022a739a4740;  1 drivers
+L_0000022a739f2560 .functor MUXZ 32, L_0000022a739f2fb8, o0000022a739a7188, o0000022a739a7008, C4<>;
+L_0000022a739f2600 .functor MUXZ 32, L_0000022a739f2560, o0000022a739a7158, L_0000022a739f2f40, C4<>;
+L_0000022a739f26a0 .functor MUXZ 32, L_0000022a739f2600, o0000022a739a73f8, o0000022a739a70f8, C4<>;
+L_0000022a739f2740 .functor MUXZ 32, L_0000022a739f26a0, o0000022a739a6fd8, L_0000022a73acd250, C4<>;
+L_0000022a739f2920 .functor MUXZ 32, L_0000022a739f2740, o0000022a739a73c8, o0000022a739a7128, C4<>;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "WB.v";
