@@ -49,7 +49,7 @@ module ALU(
     assign Op[0] = (~ALUop[1])&ALUop[0]|((~ALUop[3])&ALUop[2]);
 
     assign Logicctr = ALUop[1:0]; 
-    assign Shiftctr = ALUop[3:2]; 
+    assign Shiftctr = {ALUop[2],ALUop[7]}; 
     assign SIGctr = ALUop[0];
 
 
