@@ -1,0 +1,56 @@
+$date
+	Tue Jul 12 19:28:02 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_IFU $end
+$var wire 8 ! instr_addr [7:0] $end
+$var wire 32 " PC_now [31:0] $end
+$var wire 32 # PC_add_4 [31:0] $end
+$var reg 32 $ PC_next [31:0] $end
+$var reg 1 % clk $end
+$var reg 1 & jump_flag $end
+$var reg 1 ' pc_en $end
+$var reg 1 ( rst_n $end
+$scope module u_IFU $end
+$var wire 32 ) PC_next [31:0] $end
+$var wire 1 % clk $end
+$var wire 1 & jump_flag $end
+$var wire 1 ' pc_en $end
+$var wire 1 ( rst_n $end
+$var wire 32 * pc_new [31:0] $end
+$var wire 8 + instr_addr [7:0] $end
+$var wire 32 , PC_now [31:0] $end
+$var wire 32 - PC_add_4 [31:0] $end
+$scope module u_PC_reg $end
+$var wire 1 % clk $end
+$var wire 1 ' pc_en $end
+$var wire 32 . pc_new [31:0] $end
+$var wire 1 ( rst_n $end
+$var reg 32 / pc_out [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx /
+b0 .
+bx -
+bx ,
+bx +
+b0 *
+b0 )
+0(
+0'
+1&
+0%
+b0 $
+bx #
+bx "
+bx !
+$end

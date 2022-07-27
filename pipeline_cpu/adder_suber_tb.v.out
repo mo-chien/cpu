@@ -1,0 +1,151 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\software\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\va_math.vpi";
+S_00000202bfed8fb0 .scope module, "tb_add_suber" "tb_add_suber" 2 3;
+ .timescale -9 -12;
+P_00000202bfed04e0 .param/l "PERIOD" 0 2 6, +C4<00000000000000000000000000001010>;
+v00000202bff31e60_0 .net "co", 0 0, L_00000202bff31f00;  1 drivers
+v00000202bff32180_0 .var "data_A", 31 0;
+v00000202bff32720_0 .var "data_B", 31 0;
+v00000202bff31c80_0 .net "overflow", 0 0, L_00000202c00108c0;  1 drivers
+v00000202bff31140_0 .net "result", 31 0, L_00000202bff32cc0;  1 drivers
+v00000202bff31780_0 .net "result_sign", 0 0, L_00000202bff31fa0;  1 drivers
+v00000202bff329a0_0 .var "sub_flag", 0 0;
+v00000202bff31820_0 .net "zero", 0 0, L_00000202c0010a80;  1 drivers
+S_00000202bfed9140 .scope module, "u_add_suber" "add_suber" 2 22, 3 24 0, S_00000202bfed8fb0;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "data_A";
+    .port_info 1 /INPUT 32 "data_B";
+    .port_info 2 /INPUT 1 "sub_flag";
+    .port_info 3 /OUTPUT 32 "result";
+    .port_info 4 /OUTPUT 1 "co";
+    .port_info 5 /OUTPUT 1 "zero";
+    .port_info 6 /OUTPUT 1 "result_sign";
+    .port_info 7 /OUTPUT 1 "overflow";
+L_00000202bfec7000 .functor XOR 32, v00000202bff32720_0, L_00000202bff311e0, C4<00000000000000000000000000000000>, C4<00000000000000000000000000000000>;
+v00000202bff310a0_0 .net "Y", 31 0, L_00000202bfec7000;  1 drivers
+v00000202bff32400_0 .net *"_ivl_0", 31 0, L_00000202bff311e0;  1 drivers
+v00000202bff315a0_0 .net "co", 0 0, L_00000202bff31f00;  alias, 1 drivers
+v00000202bff31640_0 .net "data_A", 31 0, v00000202bff32180_0;  1 drivers
+v00000202bff32900_0 .net "data_B", 31 0, v00000202bff32720_0;  1 drivers
+v00000202bff31b40_0 .net "overflow", 0 0, L_00000202c00108c0;  alias, 1 drivers
+v00000202bff32540_0 .net "result", 31 0, L_00000202bff32cc0;  alias, 1 drivers
+v00000202bff325e0_0 .net "result_sign", 0 0, L_00000202bff31fa0;  alias, 1 drivers
+v00000202bff32d60_0 .net "sub_flag", 0 0, v00000202bff329a0_0;  1 drivers
+v00000202bff322c0_0 .net "zero", 0 0, L_00000202c0010a80;  alias, 1 drivers
+LS_00000202bff311e0_0_0 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_4 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_8 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_12 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_16 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_20 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_24 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_0_28 .concat [ 1 1 1 1], v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0, v00000202bff329a0_0;
+LS_00000202bff311e0_1_0 .concat [ 4 4 4 4], LS_00000202bff311e0_0_0, LS_00000202bff311e0_0_4, LS_00000202bff311e0_0_8, LS_00000202bff311e0_0_12;
+LS_00000202bff311e0_1_4 .concat [ 4 4 4 4], LS_00000202bff311e0_0_16, LS_00000202bff311e0_0_20, LS_00000202bff311e0_0_24, LS_00000202bff311e0_0_28;
+L_00000202bff311e0 .concat [ 16 16 0 0], LS_00000202bff311e0_1_0, LS_00000202bff311e0_1_4;
+S_00000202bfed92d0 .scope module, "u_adder" "adder" 3 33, 4 24 0, S_00000202bfed9140;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 32 "data_A";
+    .port_info 1 /INPUT 32 "data_B";
+    .port_info 2 /INPUT 1 "ci";
+    .port_info 3 /OUTPUT 32 "result";
+    .port_info 4 /OUTPUT 1 "co";
+    .port_info 5 /OUTPUT 1 "zero";
+    .port_info 6 /OUTPUT 1 "result_sign";
+    .port_info 7 /OUTPUT 1 "overflow";
+L_00000202bfec6eb0 .functor AND 1, L_00000202bff316e0, L_00000202bff313c0, C4<1>, C4<1>;
+L_00000202bfec6a50 .functor NOT 1, L_00000202bff31460, C4<0>, C4<0>, C4<0>;
+L_00000202bfec6970 .functor AND 1, L_00000202bfec6eb0, L_00000202bfec6a50, C4<1>, C4<1>;
+L_00000202bfec69e0 .functor NOT 1, L_00000202bff31500, C4<0>, C4<0>, C4<0>;
+L_00000202c0010b60 .functor NOT 1, L_00000202bff31d20, C4<0>, C4<0>, C4<0>;
+L_00000202c0010150 .functor AND 1, L_00000202bfec69e0, L_00000202c0010b60, C4<1>, C4<1>;
+L_00000202c0010bd0 .functor AND 1, L_00000202c0010150, L_00000202bff31960, C4<1>, C4<1>;
+L_00000202c00108c0 .functor OR 1, L_00000202bfec6970, L_00000202c0010bd0, C4<0>, C4<0>;
+L_00000202c0010a80 .functor NOT 1, L_00000202bff31a00, C4<0>, C4<0>, C4<0>;
+L_00000202bff340c0 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000202bfecee80_0 .net *"_ivl_10", 0 0, L_00000202bff340c0;  1 drivers
+v00000202bfeceb60_0 .net *"_ivl_11", 32 0, L_00000202bff32a40;  1 drivers
+v00000202bfece660_0 .net *"_ivl_13", 32 0, L_00000202bff32e00;  1 drivers
+L_00000202bff34108 .functor BUFT 1, C4<00000000000000000000000000000000>, C4<0>, C4<0>, C4<0>;
+v00000202bfece840_0 .net *"_ivl_16", 31 0, L_00000202bff34108;  1 drivers
+v00000202bfece700_0 .net *"_ivl_17", 32 0, L_00000202bff32f40;  1 drivers
+v00000202bfecede0_0 .net *"_ivl_20", 0 0, L_00000202bff316e0;  1 drivers
+v00000202bfecea20_0 .net *"_ivl_22", 0 0, L_00000202bff313c0;  1 drivers
+v00000202bfece8e0_0 .net *"_ivl_23", 0 0, L_00000202bfec6eb0;  1 drivers
+v00000202bfeceac0_0 .net *"_ivl_26", 0 0, L_00000202bff31460;  1 drivers
+v00000202bfece340_0 .net *"_ivl_27", 0 0, L_00000202bfec6a50;  1 drivers
+v00000202bfece0c0_0 .net *"_ivl_29", 0 0, L_00000202bfec6970;  1 drivers
+v00000202bfece160_0 .net *"_ivl_3", 32 0, L_00000202bff32360;  1 drivers
+v00000202bfece200_0 .net *"_ivl_32", 0 0, L_00000202bff31500;  1 drivers
+v00000202bfece2a0_0 .net *"_ivl_33", 0 0, L_00000202bfec69e0;  1 drivers
+v00000202bfece3e0_0 .net *"_ivl_36", 0 0, L_00000202bff31d20;  1 drivers
+v00000202bff318c0_0 .net *"_ivl_37", 0 0, L_00000202c0010b60;  1 drivers
+v00000202bff31be0_0 .net *"_ivl_39", 0 0, L_00000202c0010150;  1 drivers
+v00000202bff32220_0 .net *"_ivl_42", 0 0, L_00000202bff31960;  1 drivers
+v00000202bff32680_0 .net *"_ivl_43", 0 0, L_00000202c0010bd0;  1 drivers
+v00000202bff32860_0 .net *"_ivl_48", 0 0, L_00000202bff31a00;  1 drivers
+L_00000202bff34078 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v00000202bff320e0_0 .net *"_ivl_6", 0 0, L_00000202bff34078;  1 drivers
+v00000202bff324a0_0 .net *"_ivl_7", 32 0, L_00000202bff32040;  1 drivers
+v00000202bff32ae0_0 .net "ci", 0 0, v00000202bff329a0_0;  alias, 1 drivers
+v00000202bff31aa0_0 .net "co", 0 0, L_00000202bff31f00;  alias, 1 drivers
+v00000202bff32b80_0 .net "data_A", 31 0, v00000202bff32180_0;  alias, 1 drivers
+v00000202bff31320_0 .net "data_B", 31 0, L_00000202bfec7000;  alias, 1 drivers
+v00000202bff31280_0 .net "overflow", 0 0, L_00000202c00108c0;  alias, 1 drivers
+v00000202bff32c20_0 .net "result", 31 0, L_00000202bff32cc0;  alias, 1 drivers
+v00000202bff32ea0_0 .net "result_sign", 0 0, L_00000202bff31fa0;  alias, 1 drivers
+v00000202bff327c0_0 .net "zero", 0 0, L_00000202c0010a80;  alias, 1 drivers
+L_00000202bff31f00 .part L_00000202bff32f40, 32, 1;
+L_00000202bff32cc0 .part L_00000202bff32f40, 0, 32;
+L_00000202bff32360 .concat [ 32 1 0 0], v00000202bff32180_0, L_00000202bff34078;
+L_00000202bff32040 .concat [ 32 1 0 0], L_00000202bfec7000, L_00000202bff340c0;
+L_00000202bff32a40 .arith/sum 33, L_00000202bff32360, L_00000202bff32040;
+L_00000202bff32e00 .concat [ 1 32 0 0], v00000202bff329a0_0, L_00000202bff34108;
+L_00000202bff32f40 .arith/sum 33, L_00000202bff32a40, L_00000202bff32e00;
+L_00000202bff316e0 .part v00000202bff32180_0, 31, 1;
+L_00000202bff313c0 .part L_00000202bfec7000, 31, 1;
+L_00000202bff31460 .part L_00000202bff32cc0, 31, 1;
+L_00000202bff31500 .part v00000202bff32180_0, 31, 1;
+L_00000202bff31d20 .part L_00000202bfec7000, 31, 1;
+L_00000202bff31960 .part L_00000202bff32cc0, 31, 1;
+L_00000202bff31a00 .reduce/or L_00000202bff32cc0;
+L_00000202bff31fa0 .part L_00000202bff32cc0, 31, 1;
+    .scope S_00000202bfed8fb0;
+T_0 ;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000202bff32180_0, 0, 32;
+    %pushi/vec4 0, 0, 32;
+    %store/vec4 v00000202bff32720_0, 0, 32;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000202bff329a0_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_00000202bfed8fb0;
+T_1 ;
+    %vpi_call 2 36 "$dumpfile", "adder_suber_wave.vcd" {0 0 0};
+    %vpi_call 2 37 "$dumpvars" {0 0 0};
+    %pushi/vec4 15654913, 0, 32;
+    %store/vec4 v00000202bff32180_0, 0, 32;
+    %pushi/vec4 1122064, 0, 32;
+    %store/vec4 v00000202bff32720_0, 0, 32;
+    %delay 10000, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000202bff329a0_0, 0, 1;
+    %delay 10000, 0;
+    %vpi_call 2 43 "$finish" {0 0 0};
+    %end;
+    .thread T_1;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "adder_suber_tb.v";
+    "./add_suber.v";
+    "./adder.v";

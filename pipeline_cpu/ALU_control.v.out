@@ -1,0 +1,114 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1110-g18392a46)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "D:\software\iverilog\lib\ivl\system.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "D:\software\iverilog\lib\ivl\va_math.vpi";
+S_000001b1ef552780 .scope module, "ALU_control" "ALU_control" 2 24;
+ .timescale -9 -12;
+    .port_info 0 /INPUT 5 "opcode";
+    .port_info 1 /INPUT 3 "func3";
+    .port_info 2 /INPUT 1 "func7";
+    .port_info 3 /OUTPUT 4 "ALUctl";
+    .port_info 4 /OUTPUT 1 "ALUdata_flag";
+L_000001b1ef579640 .functor NOT 1, L_000001b1ef5dabb0, C4<0>, C4<0>, C4<0>;
+L_000001b1ef579800 .functor AND 1, L_000001b1ef579640, L_000001b1ef5da070, C4<1>, C4<1>;
+L_000001b1ef5799c0 .functor AND 1, L_000001b1ef579800, L_000001b1ef5da2f0, C4<1>, C4<1>;
+o000001b1ef5874e8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001b1ef5794f0 .functor AND 1, L_000001b1ef5799c0, o000001b1ef5874e8, C4<1>, C4<1>;
+L_000001b1ef579560 .functor AND 1, L_000001b1ef5dac50, L_000001b1ef5dacf0, C4<1>, C4<1>;
+L_000001b1ef5dbcc0 .functor BUFT 1, C4<x>, C4<0>, C4<0>, C4<0>;
+L_000001b1ef579870 .functor AND 1, L_000001b1ef5dbcc0, L_000001b1ef5dbb50, C4<1>, C4<1>;
+L_000001b1ef579b10 .functor NOT 1, L_000001b1ef5da430, C4<0>, C4<0>, C4<0>;
+L_000001b1ef5dbd08 .functor BUFT 1, C4<x>, C4<0>, C4<0>, C4<0>;
+L_000001b1ef5798e0 .functor AND 1, L_000001b1ef5dbd08, L_000001b1ef579b10, C4<1>, C4<1>;
+L_000001b1ef579950 .functor NOT 1, L_000001b1ef5db970, C4<0>, C4<0>, C4<0>;
+L_000001b1ef579a30 .functor AND 1, L_000001b1ef5798e0, L_000001b1ef579950, C4<1>, C4<1>;
+L_000001b1ef579aa0 .functor OR 1, L_000001b1ef579870, L_000001b1ef579a30, C4<0>, C4<0>;
+v000001b1ef578d30_0 .var "ALUctl", 3 0;
+v000001b1ef578dd0_0 .net "ALUdata_flag", 0 0, L_000001b1ef579aa0;  1 drivers
+v000001b1ef578a10_0 .net "B_ALUctl", 3 0, L_000001b1ef5da610;  1 drivers
+v000001b1ef578c90_0 .net "I_ALUctl", 3 0, L_000001b1ef5db010;  1 drivers
+v000001b1ef578fb0_0 .net "R_ALUctl", 3 0, L_000001b1ef5da4d0;  1 drivers
+v000001b1ef578e70_0 .net *"_ivl_11", 0 0, L_000001b1ef5da2f0;  1 drivers
+v000001b1ef578f10_0 .net *"_ivl_12", 0 0, L_000001b1ef5799c0;  1 drivers
+v000001b1ef5790f0_0 .net *"_ivl_14", 0 0, L_000001b1ef5794f0;  1 drivers
+L_000001b1ef5dbc78 .functor BUFT 1, C4<001>, C4<0>, C4<0>, C4<0>;
+v000001b1ef579190_0 .net/2u *"_ivl_18", 2 0, L_000001b1ef5dbc78;  1 drivers
+v000001b1ef5792d0_0 .net *"_ivl_21", 0 0, L_000001b1ef5dac50;  1 drivers
+v000001b1ef578510_0 .net *"_ivl_23", 0 0, L_000001b1ef5dacf0;  1 drivers
+v000001b1ef578470_0 .net *"_ivl_24", 0 0, L_000001b1ef579560;  1 drivers
+v000001b1ef5785b0_0 .net *"_ivl_28", 0 0, L_000001b1ef5dbcc0;  1 drivers
+v000001b1ef578650_0 .net *"_ivl_3", 0 0, L_000001b1ef5dabb0;  1 drivers
+v000001b1ef5786f0_0 .net *"_ivl_31", 0 0, L_000001b1ef5dbb50;  1 drivers
+v000001b1ef5dab10_0 .net *"_ivl_32", 0 0, L_000001b1ef579870;  1 drivers
+v000001b1ef5da9d0_0 .net *"_ivl_34", 0 0, L_000001b1ef5dbd08;  1 drivers
+v000001b1ef5d9f30_0 .net *"_ivl_37", 0 0, L_000001b1ef5da430;  1 drivers
+v000001b1ef5da570_0 .net *"_ivl_38", 0 0, L_000001b1ef579b10;  1 drivers
+v000001b1ef5db830_0 .net *"_ivl_4", 0 0, L_000001b1ef579640;  1 drivers
+v000001b1ef5db6f0_0 .net *"_ivl_40", 0 0, L_000001b1ef5798e0;  1 drivers
+v000001b1ef5db150_0 .net *"_ivl_43", 0 0, L_000001b1ef5db970;  1 drivers
+v000001b1ef5daa70_0 .net *"_ivl_44", 0 0, L_000001b1ef579950;  1 drivers
+v000001b1ef5db330_0 .net *"_ivl_46", 0 0, L_000001b1ef579a30;  1 drivers
+v000001b1ef5daf70_0 .net *"_ivl_7", 0 0, L_000001b1ef5da070;  1 drivers
+v000001b1ef5da890_0 .net *"_ivl_8", 0 0, L_000001b1ef579800;  1 drivers
+o000001b1ef5874b8 .functor BUFZ 3, C4<zzz>; HiZ drive
+v000001b1ef5da390_0 .net "func3", 2 0, o000001b1ef5874b8;  0 drivers
+v000001b1ef5da930_0 .net "func7", 0 0, o000001b1ef5874e8;  0 drivers
+o000001b1ef587518 .functor BUFZ 5, C4<zzzzz>; HiZ drive
+v000001b1ef5db8d0_0 .net "opcode", 4 0, o000001b1ef587518;  0 drivers
+E_000001b1ef538e20 .event anyedge, v000001b1ef5db8d0_0, v000001b1ef578fb0_0, v000001b1ef578c90_0, v000001b1ef578a10_0;
+L_000001b1ef5da4d0 .concat [ 3 1 0 0], o000001b1ef5874b8, o000001b1ef5874e8;
+L_000001b1ef5dabb0 .part o000001b1ef5874b8, 1, 1;
+L_000001b1ef5da070 .part o000001b1ef5874b8, 2, 1;
+L_000001b1ef5da2f0 .part o000001b1ef5874b8, 0, 1;
+L_000001b1ef5db010 .concat [ 3 1 0 0], o000001b1ef5874b8, L_000001b1ef5794f0;
+L_000001b1ef5dac50 .part o000001b1ef5874b8, 2, 1;
+L_000001b1ef5dacf0 .part o000001b1ef5874b8, 1, 1;
+L_000001b1ef5da610 .concat [ 1 3 0 0], L_000001b1ef579560, L_000001b1ef5dbc78;
+L_000001b1ef5dbb50 .part o000001b1ef587518, 4, 1;
+L_000001b1ef5da430 .part o000001b1ef587518, 3, 1;
+L_000001b1ef5db970 .part o000001b1ef587518, 2, 1;
+    .scope S_000001b1ef552780;
+T_0 ;
+    %wait E_000001b1ef538e20;
+    %load/vec4 v000001b1ef5db8d0_0;
+    %dup/vec4;
+    %pushi/vec4 12, 0, 5;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 4, 0, 5;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %dup/vec4;
+    %pushi/vec4 24, 0, 5;
+    %cmp/u;
+    %jmp/1 T_0.2, 6;
+    %pushi/vec4 0, 0, 4;
+    %store/vec4 v000001b1ef578d30_0, 0, 4;
+    %jmp T_0.4;
+T_0.0 ;
+    %load/vec4 v000001b1ef578fb0_0;
+    %store/vec4 v000001b1ef578d30_0, 0, 4;
+    %jmp T_0.4;
+T_0.1 ;
+    %load/vec4 v000001b1ef578c90_0;
+    %store/vec4 v000001b1ef578d30_0, 0, 4;
+    %jmp T_0.4;
+T_0.2 ;
+    %load/vec4 v000001b1ef578a10_0;
+    %store/vec4 v000001b1ef578d30_0, 0, 4;
+    %jmp T_0.4;
+T_0.4 ;
+    %pop/vec4 1;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ALU_control.v";

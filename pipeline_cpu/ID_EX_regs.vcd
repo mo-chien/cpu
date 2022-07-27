@@ -1,0 +1,208 @@
+$date
+	Thu Jul 14 19:32:37 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_ID_EX_regs $end
+$var wire 1 ! validout $end
+$var wire 32 " out_imme [31:0] $end
+$var wire 1 # out_func7 $end
+$var wire 3 $ out_func3 [2:0] $end
+$var wire 1 % out_S_type $end
+$var wire 32 & out_Rd_data2 [31:0] $end
+$var wire 32 ' out_Rd_data1 [31:0] $end
+$var wire 5 ( out_Rd [4:0] $end
+$var wire 1 ) out_R_type $end
+$var wire 32 * out_PC_add_imme [31:0] $end
+$var wire 32 + out_PC_add_4 [31:0] $end
+$var wire 1 , out_L_type $end
+$var wire 1 - out_LUI_instr $end
+$var wire 1 . out_JAL_instr $end
+$var wire 1 / out_JALR_instr $end
+$var wire 1 0 out_I_type $end
+$var wire 1 1 out_B_type $end
+$var wire 1 2 out_AUIPC_instr $end
+$var wire 1 3 in_allow $end
+$var reg 1 4 clear $end
+$var reg 1 5 clk $end
+$var reg 1 6 in_AUIPC_instr $end
+$var reg 1 7 in_B_type $end
+$var reg 1 8 in_I_type $end
+$var reg 1 9 in_JALR_instr $end
+$var reg 1 : in_JAL_instr $end
+$var reg 1 ; in_LUI_instr $end
+$var reg 1 < in_L_type $end
+$var reg 32 = in_PC_add_4 [31:0] $end
+$var reg 32 > in_PC_add_imme [31:0] $end
+$var reg 1 ? in_R_type $end
+$var reg 5 @ in_Rd [4:0] $end
+$var reg 32 A in_Rd_data1 [31:0] $end
+$var reg 32 B in_Rd_data2 [31:0] $end
+$var reg 1 C in_S_type $end
+$var reg 3 D in_func3 [2:0] $end
+$var reg 1 E in_func7 $end
+$var reg 32 F in_imme [31:0] $end
+$var reg 1 G out_allow $end
+$var reg 1 H pipe_ready_go $end
+$var reg 1 I rst_n $end
+$var reg 1 J validin $end
+$scope module u_ID_EX_regs $end
+$var wire 1 4 clear $end
+$var wire 1 5 clk $end
+$var wire 1 6 in_AUIPC_instr $end
+$var wire 1 7 in_B_type $end
+$var wire 1 8 in_I_type $end
+$var wire 1 9 in_JALR_instr $end
+$var wire 1 : in_JAL_instr $end
+$var wire 1 ; in_LUI_instr $end
+$var wire 1 < in_L_type $end
+$var wire 32 K in_PC_add_4 [31:0] $end
+$var wire 32 L in_PC_add_imme [31:0] $end
+$var wire 1 ? in_R_type $end
+$var wire 5 M in_Rd [4:0] $end
+$var wire 32 N in_Rd_data1 [31:0] $end
+$var wire 32 O in_Rd_data2 [31:0] $end
+$var wire 1 C in_S_type $end
+$var wire 1 3 in_allow $end
+$var wire 3 P in_func3 [2:0] $end
+$var wire 1 E in_func7 $end
+$var wire 32 Q in_imme [31:0] $end
+$var wire 1 G out_allow $end
+$var wire 1 H pipe_ready_go $end
+$var wire 1 I rst_n $end
+$var wire 1 J validin $end
+$var wire 1 ! validout $end
+$var reg 1 2 out_AUIPC_instr $end
+$var reg 1 1 out_B_type $end
+$var reg 1 0 out_I_type $end
+$var reg 1 / out_JALR_instr $end
+$var reg 1 . out_JAL_instr $end
+$var reg 1 - out_LUI_instr $end
+$var reg 1 , out_L_type $end
+$var reg 32 R out_PC_add_4 [31:0] $end
+$var reg 32 S out_PC_add_imme [31:0] $end
+$var reg 1 ) out_R_type $end
+$var reg 5 T out_Rd [4:0] $end
+$var reg 32 U out_Rd_data1 [31:0] $end
+$var reg 32 V out_Rd_data2 [31:0] $end
+$var reg 1 % out_S_type $end
+$var reg 3 W out_func3 [2:0] $end
+$var reg 1 # out_func7 $end
+$var reg 32 X out_imme [31:0] $end
+$var reg 1 Y pipe_valid $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xY
+bx X
+bx W
+bx V
+bx U
+bx T
+bx S
+bx R
+b0 Q
+b0 P
+b0 O
+b0 N
+b0 M
+b0 L
+b0 K
+0J
+0I
+0H
+0G
+b0 F
+0E
+b0 D
+0C
+b0 B
+b0 A
+b0 @
+0?
+b0 >
+b0 =
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+x3
+x2
+x1
+x0
+x/
+x.
+x-
+x,
+bx +
+bx *
+x)
+bx (
+bx '
+bx &
+x%
+bx $
+x#
+bx "
+0!
+$end
+#5000
+13
+b0 &
+b0 V
+b0 '
+b0 U
+01
+02
+0-
+0/
+0.
+0)
+0%
+0,
+00
+0#
+b0 (
+b0 T
+b0 "
+b0 X
+b0 $
+b0 W
+b0 *
+b0 S
+b0 +
+b0 R
+0Y
+15
+#10000
+05
+#15000
+15
+#20000
+05
+14
+1G
+1J
+1I
+#25000
+15
+#30000
+05
+x4
+#35000
+03
+1Y
+15
+#40000
+05

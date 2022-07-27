@@ -1,0 +1,68 @@
+$date
+	Sun Jun 26 19:32:06 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_add_suber $end
+$var wire 1 ! zero $end
+$var wire 1 " result_sign $end
+$var wire 32 # result [31:0] $end
+$var wire 1 $ overflow $end
+$var wire 1 % co $end
+$var reg 32 & data_A [31:0] $end
+$var reg 32 ' data_B [31:0] $end
+$var reg 1 ( sub_flag $end
+$scope module u_add_suber $end
+$var wire 32 ) Y [31:0] $end
+$var wire 32 * data_A [31:0] $end
+$var wire 32 + data_B [31:0] $end
+$var wire 1 ( sub_flag $end
+$var wire 1 ! zero $end
+$var wire 1 " result_sign $end
+$var wire 32 , result [31:0] $end
+$var wire 1 $ overflow $end
+$var wire 1 % co $end
+$scope module u_adder $end
+$var wire 1 ( ci $end
+$var wire 32 - data_A [31:0] $end
+$var wire 32 . data_B [31:0] $end
+$var wire 1 $ overflow $end
+$var wire 1 ! zero $end
+$var wire 1 " result_sign $end
+$var wire 32 / result [31:0] $end
+$var wire 1 % co $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b111111111111111100010001 /
+b100010001111100010000 .
+b111011101110000000000001 -
+b111111111111111100010001 ,
+b100010001111100010000 +
+b111011101110000000000001 *
+b100010001111100010000 )
+0(
+b100010001111100010000 '
+b111011101110000000000001 &
+0%
+0$
+b111111111111111100010001 #
+0"
+0!
+$end
+#10000
+1%
+b11111111111011101110000011101111 )
+b11111111111011101110000011101111 .
+b110111011100000011110001 #
+b110111011100000011110001 ,
+b110111011100000011110001 /
+1(
+#20000
