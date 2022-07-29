@@ -8,12 +8,12 @@ parameter PERIOD  = 10;
 
 // uart_rx Inputs
 reg   clk                                  = 0 ;
+reg   rxd                                  = 1 ;
 reg   rst_n                                = 0 ;
-reg   cnt_add                              = 0 ;
 
 // uart_rx Outputs
-wire  cnt_end                              ;
-
+wire  rx_valid                              ;
+wire  [7:0]  data_out                       ;
 
 initial
 begin
@@ -26,22 +26,41 @@ begin
 end
 
 uart_rx#(
-    .datawidth ( 5 ),
-    .Baudrate  ( 9600 )
+    .datawidth ( 8 ),
+    .Baudrate   ( 9600 )
 )u_uart_rx(
     .clk       ( clk       ),
     .rst_n     ( rst_n     ),
-    .cnt_add   ( cnt_add   ),
-    .cnt_end   ( cnt_end   )
+    .rxd       ( rxd       ),
+    .data_out  ( data_out  ),
+    .rx_valid  ( rx_valid  )
 );
+
 
 initial
 begin
     $dumpfile("uart_rx.vcd");
     $dumpvars    ;
     #20
-
-    cnt_add = 1;
+    rxd = 0;
+    #50
+    rxd= 1 ;
+    #50
+    rxd= 1 ;
+    #50
+    rxd= 1 ;
+    #50
+    rxd= 1 ;
+    #50
+    rxd= 0 ;
+    #50
+    rxd= 0 ;
+    #50
+    rxd= 0 ;
+    #50
+    rxd= 0 ;
+    #50
+    rxd= 1 ;
     #100
     $finish;
 end
