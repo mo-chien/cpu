@@ -84,6 +84,7 @@ always @(posedge clk or negedge rst_n) begin
       add_flag <=0;
       rx_valid<=1;
    end
+   else rx_valid<=0;
 
 end
 reg [datawidth-1:0] rx_data;
